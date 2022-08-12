@@ -1,21 +1,6 @@
-const { ApolloServer, gql } = require('apollo-server');
-// The GraphQL schema
-const typeDefs = gql`
-  type Query {
-    hola: String!
-    holaConNombre(nombre:String!): String
-    holaAlCursoGraphQL: String!
-  }
-`;
-
-const resolvers = {
-  Query: {
-    hola: ()=>  { return 'Hola mundo!' },
-    holaConNombre : (root : any,args : any ,context: any) =>{ return `Hola mundo ${args.nombre}`},
-    holaAlCursoGraphQL: ()=>  { return 'Hola Mundo en el curso de GraphQL' },
-  },
-};
-
+import { ApolloServer } from 'apollo-server';
+import typeDefs from './schema';
+import resolvers from './resolvers/resolversMap';
 
 const server = new ApolloServer({
   typeDefs,

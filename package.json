@@ -2,12 +2,12 @@
   "name": "hola_mundo",
   "version": "1.0.0",
   "description": "",
-  "main": "build/server.js",
+  "main": "build/server.ts",
   "scripts": {
-    "start": "node build/server.js",
+    "start": "node build/server.ts",
     "build": "tsc -p . && ncp src/schema build/schema",
     "start:dev": "npm run build:dev",
-    "build:dev": "nodemon 'src/server.js' --exec 'ts-node' src/server.js -e ts,graphql"
+    "build:dev": "nodemon 'src/server.ts' --exec 'ts-node' src/server.ts -e ts,graphql"
   },
   "repository": {
     "type": "git",
