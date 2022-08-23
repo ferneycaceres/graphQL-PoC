@@ -4,7 +4,7 @@
   "description": "",
   "main": "build/server.ts",
   "scripts": {
-    "start": "node build/server.ts",
+    "start": "node build/server.js",
     "build": "tsc -p . && ncp src/schema build/schema",
     "start:dev": "npm run build:dev",
     "build:dev": "nodemon 'src/server.ts' --exec 'ts-node' src/server.ts -e ts,graphql"
